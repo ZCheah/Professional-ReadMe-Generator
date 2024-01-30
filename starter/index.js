@@ -1,10 +1,8 @@
-// Variables required for the program
 const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
-// An array of questions for users
 const questions = [
     {
         type: "input",
@@ -64,14 +62,11 @@ const questions = [
     }
 ];
 
-// Writes README file
 function writeToFile(fileName, data) {
 }
 
-// Initialize program
 function init() {
 
 }
 
-// Call function
 init();
