@@ -66,12 +66,22 @@ const questions = [
 
 // Writes README file
 function writeToFile(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Success!");
+    });
 }
+9;
 
-// Initialize program
+// function that initializes app
 function init() {
-
+    inquirer.prompt(questions).then(function (response) {
+        console.log(response);
+        writeToFile(`${response.title}.md`, response);
+    });
 }
 
-// Call function
+// Function call to initialize app
 init();
